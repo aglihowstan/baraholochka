@@ -32,6 +32,8 @@ def message(message):
         bot.send_message(message.chat.id, "Выберите, что хотите посмотреть", reply_markup=markup)
     elif message.text == 'Добавить одежду':
         pass
+    elif message.text == 'Привет' :
+        pass
     elif message.text == 'Моя одежда':
         pass
     elif message.text == 'Корзина':
