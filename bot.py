@@ -25,19 +25,23 @@ def message(message):
         button3 = types.KeyboardButton('Обувь')
         button4 = types.KeyboardButton('Аксессуары')
         button5 = types.KeyboardButton('Смотреть все')
+        button6 = types.KeyboardButton('Назад')
         markup = types.ReplyKeyboardMarkup()
         markup.row(button, button2)
         markup.row(button3, button4)
         markup.row(button5)
+        markup.row(button6)
         bot.send_message(message.chat.id, "Выберите, что хотите посмотреть", reply_markup=markup)
-    elif message.text == 'Добавить одежду':
+    if message.text == 'Добавить одежду':
         pass
-    elif message.text == 'Моя одежда':
+    if message.text == 'Привет' :
         pass
-    elif message.text == 'Корзина':
+    if message.text == 'Моя одежда':
         pass
-    else:
-        bot.send_message(message.chat.id, "Нет данного выбора")
+    if message.text == 'Корзина':
+        pass
+
+
 
 
 bot.polling(none_stop=True)
