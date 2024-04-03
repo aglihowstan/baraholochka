@@ -16,7 +16,6 @@ def start(message):
     markup.row(button2)
     markup.row(button3, button4)
     bot.send_message(message.chat.id, 'fdfdfdfdf', reply_markup=markup)
-    welcome.close()
 
 @bot.message_handler()
 def message(message):
@@ -48,8 +47,6 @@ def message(message):
     if message.text == 'Привет' :
         pass
     if message.text == 'Моя одежда':
-        pass
-    if message.text == 'Корзина':
         pass
     if message.text == 'Обувь':
         button = types.KeyboardButton('Кросовки')
