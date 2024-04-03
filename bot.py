@@ -15,7 +15,8 @@ def start(message):
     markup.row(button)
     markup.row(button2)
     markup.row(button3, button4)
-    bot.send_message(message.chat.id, welcome, reply_markup=markup)
+    bot.send_message(message.chat.id, 'fdfdfdfdf', reply_markup=markup)
+    welcome.close()
 
 @bot.message_handler()
 def message(message):
@@ -32,6 +33,16 @@ def message(message):
         markup.row(button5)
         markup.row(button6)
         bot.send_message(message.chat.id, "Выберите, что хотите посмотреть", reply_markup=markup)
+    if message.text == 'Назад':
+        markup2 = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button7 = types.KeyboardButton('Смотреть одежду')
+        button8 = types.KeyboardButton('Добавить одежду')
+        button9 = types.KeyboardButton('Моя одежда')
+        button10 = types.KeyboardButton('Корзина')
+        markup2.row(button7)
+        markup2.row(button8)
+        markup2.row(button9, button10)
+        bot.send_message(message.chat.id, 'dfdfdfdfdf', reply_markup=markup2)
     if message.text == 'Добавить одежду':
         pass
     if message.text == 'Привет' :
@@ -40,6 +51,37 @@ def message(message):
         pass
     if message.text == 'Корзина':
         pass
+    if message.text == 'Обувь':
+        button = types.KeyboardButton('Кросовки')
+        button2 = types.KeyboardButton('Кеды')
+        button3 = types.KeyboardButton('Туфли')
+        button4 = types.KeyboardButton('Босоножки')
+        button5 = types.KeyboardButton('Сланцы')
+        button6 = types.KeyboardButton('Смотреть несколько')
+        button7 = types.KeyboardButton('Смотреть все')
+        button8 = types.KeyboardButton('Назад.')
+        markup = types.ReplyKeyboardMarkup()
+        markup.row(button, button2)
+        markup.row(button3, button4)
+        markup.row(button5)
+        markup.row(button6)
+        markup.row(button7)
+        markup.row(button8)
+        bot.send_message(message.chat.id, "Выберите, что хотите посмотреть", reply_markup=markup)
+    if message.text == 'Назад.':
+        button = types.KeyboardButton('Верх')
+        button2 = types.KeyboardButton('Низ')
+        button3 = types.KeyboardButton('Обувь')
+        button4 = types.KeyboardButton('Аксессуары')
+        button5 = types.KeyboardButton('Смотреть все')
+        button6 = types.KeyboardButton('Назад')
+        markup = types.ReplyKeyboardMarkup()
+        markup.row(button, button2)
+        markup.row(button3, button4)
+        markup.row(button5)
+        markup.row(button6)
+        bot.send_message(message.chat.id, "Выберите, что хотите посмотреть", reply_markup=markup)
+
 
 
 
