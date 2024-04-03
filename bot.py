@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-from keys import BOT_API_KEY
+from keys import BOT_API_KEYgit 
 
 bot = telebot.TeleBot(BOT_API_KEY)
 welcome = open('textes/welcome.txt', 'rb')
