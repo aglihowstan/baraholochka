@@ -3,7 +3,6 @@ from telebot import types
 from keys import BOT_API_KEY
 
 bot = telebot.TeleBot(BOT_API_KEY)
-welcome = open('textes/welcome.txt', 'rb')
 
 @bot.message_handler(commands = ['start'])
 def start(message):
@@ -26,7 +25,7 @@ def message(message):
         button4 = types.KeyboardButton('Аксессуары')
         button5 = types.KeyboardButton('Смотреть все')
         button6 = types.KeyboardButton('Назад')
-        markup = types.ReplyKeyboardMarkup()
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         markup.row(button, button2)
         markup.row(button3, button4)
         markup.row(button5)
@@ -42,12 +41,36 @@ def message(message):
         markup2.row(button8)
         markup2.row(button9, button10)
         bot.send_message(message.chat.id, 'dfdfdfdfdf', reply_markup=markup2)
-    if message.text == 'Добавить одежду':
-        pass
-    if message.text == 'Привет' :
-        pass
-    if message.text == 'Моя одежда':
-        pass
+    if message.text == 'Верх':
+        button = types.KeyboardButton('Футболки')
+        button2 = types.KeyboardButton('Свитшоты')
+        button3 = types.KeyboardButton('Толстовки')
+        button4 = types.KeyboardButton('Куртки')
+        button6 = types.KeyboardButton('Смотреть несколько')
+        button7 = types.KeyboardButton('Смотреть все')
+        button8 = types.KeyboardButton('Назад.')
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        markup.row(button, button2)
+        markup.row(button3, button4)
+        markup.row(button6)
+        markup.row(button7)
+        markup.row(button8)
+        bot.send_message(message.chat.id, "Выберите, что хотите посмотреть", reply_markup=markup)
+    if message.text == 'Низ':
+        button = types.KeyboardButton('Джинсы')
+        button2 = types.KeyboardButton('Брюки')
+        button3 = types.KeyboardButton('Юбки')
+        button4 = types.KeyboardButton('Шорты')
+        button6 = types.KeyboardButton('Смотреть несколько')
+        button7 = types.KeyboardButton('Смотреть все')
+        button8 = types.KeyboardButton('Назад.')
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        markup.row(button, button2)
+        markup.row(button3, button4)
+        markup.row(button6)
+        markup.row(button7)
+        markup.row(button8)
+        bot.send_message(message.chat.id, "Выберите, что хотите посмотреть", reply_markup=markup)
     if message.text == 'Обувь':
         button = types.KeyboardButton('Кросовки')
         button2 = types.KeyboardButton('Кеды')
@@ -57,10 +80,25 @@ def message(message):
         button6 = types.KeyboardButton('Смотреть несколько')
         button7 = types.KeyboardButton('Смотреть все')
         button8 = types.KeyboardButton('Назад.')
-        markup = types.ReplyKeyboardMarkup()
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         markup.row(button, button2)
         markup.row(button3, button4)
         markup.row(button5)
+        markup.row(button6)
+        markup.row(button7)
+        markup.row(button8)
+        bot.send_message(message.chat.id, "Выберите, что хотите посмотреть", reply_markup=markup)
+    if message.text == 'Аксессуары':
+        button = types.KeyboardButton('Сумки')
+        button2 = types.KeyboardButton('Рюкзаки')
+        button3 = types.KeyboardButton('Украшения')
+        button4 = types.KeyboardButton('Ремни')
+        button6 = types.KeyboardButton('Смотреть несколько')
+        button7 = types.KeyboardButton('Смотреть все')
+        button8 = types.KeyboardButton('Назад.')
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        markup.row(button, button2)
+        markup.row(button3, button4)
         markup.row(button6)
         markup.row(button7)
         markup.row(button8)
@@ -72,7 +110,7 @@ def message(message):
         button4 = types.KeyboardButton('Аксессуары')
         button5 = types.KeyboardButton('Смотреть все')
         button6 = types.KeyboardButton('Назад')
-        markup = types.ReplyKeyboardMarkup()
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         markup.row(button, button2)
         markup.row(button3, button4)
         markup.row(button5)
